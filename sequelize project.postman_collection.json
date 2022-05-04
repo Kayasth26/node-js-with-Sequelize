@@ -1,0 +1,366 @@
+{
+	"info": {
+		"_postman_id": "19bce971-3b7e-41b9-9550-134b6d1f3561",
+		"name": "sequelize project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:6000/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Yash",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "yashkayasth1844@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Yash@123",
+							"type": "text"
+						},
+						{
+							"key": "uploadImage",
+							"type": "file",
+							"src": "/C:/Users/K4 KAYASTH/OneDrive/Pictures/Screenshots/2020-01-01 (1).png"
+						},
+						{
+							"key": "confirmpassword",
+							"value": "Yash@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:6000/register",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:6000/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"nipa@gmail.com\",\r\n    \"password\": \"Yash@3824423\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:6000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:6000/viewProfile/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:6000/viewProfile/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"viewProfile",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:6000/updateProfile/:id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Nipa",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "nipa@gmail.com\n\n",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "female",
+							"type": "text"
+						},
+						{
+							"key": "uploadImage",
+							"type": "file",
+							"src": "/C:/Users/K4 KAYASTH/OneDrive/Pictures/Screenshots/2020-02-14 (2).png"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:6000/updateProfile/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"updateProfile",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:6000/resetPassword/:id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"Yash@123\",\r\n    \"newPassword\": \"Yash@3824423\",\r\n    \"confirmPassword\": \"Yash@3824423\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:6000/resetPassword/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"resetPassword",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:6000/multiAddAddress",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pcGFAZ21haWwuY29tIiwiaWF0IjoxNjUxNDkwMjU4LCJleHAiOjE2NTE3NDk0NTh9.KXbrG4WnV7QEQs1vlaOCC_O9SvvNsLU6StZiPnuIgT4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"title\":\"nodejs\",\r\n   \"address1\":\"isanpur\",\r\n   \"address2\":\"maninagar\",\r\n   \"country\":\"india\",\r\n   \"state\":\"gujarat\",\r\n   \"city\":\"ahmedabad\",\r\n   \"pincode\":\"380043\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:6000/multiAddAddress",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"multiAddAddress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:6000/findAddress",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pcGFAZ21haWwuY29tIiwiaWF0IjoxNjUxNTU5MjM4LCJleHAiOjE2NTE4MTg0Mzh9.te4BLkDQNc2nBjApzsyt491QxalsJIjIL7zfbV-dJl0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6000/findAddress",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"findAddress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:6000/findAddress/:id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pcGFAZ21haWwuY29tIiwiaWF0IjoxNjUxNTU5MjM4LCJleHAiOjE2NTE4MTg0Mzh9.te4BLkDQNc2nBjApzsyt491QxalsJIjIL7zfbV-dJl0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6000/findAddress/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"findAddress",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:6000/updateAddress/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pcGFAZ21haWwuY29tIiwiaWF0IjoxNjUxNTU5MjM4LCJleHAiOjE2NTE4MTg0Mzh9.te4BLkDQNc2nBjApzsyt491QxalsJIjIL7zfbV-dJl0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"mongodb\",\r\n    \"address1\": \"sg\",\r\n    \"address2\": \"gg\",\r\n    \"country\": \"India\",\r\n    \"state\": \"UP\",\r\n    \"city\": \"ahmedabad\",\r\n    \"pincode\": \"380050\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:6000/updateAddress/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"updateAddress",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:6000/deleteAddress/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pcGFAZ21haWwuY29tIiwiaWF0IjoxNjUxNTU5MjM4LCJleHAiOjE2NTE4MTg0Mzh9.te4BLkDQNc2nBjApzsyt491QxalsJIjIL7zfbV-dJl0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:6000/deleteAddress/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"deleteAddress",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
